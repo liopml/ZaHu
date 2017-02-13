@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wsy.geeknewstest">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_na   me"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        //主类
+        <activity
+            android:name=".ui.main.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.main.activity.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme" />
+
+        //知乎
+        <activity
+            android:name=".ui.zhihu.activity.CalendarActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.zhihu.activity.ZhihuDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.zhihu.activity.CommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.zhihu.activity.ThemeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.zhihu.activity.SectionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        //微信
+        <activity
+            android:name=".ui.wechat.activity.TechDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        //Gank
+        <activity
+            android:name=".ui.gank.activity.GirlDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        //掘金
+        <activity
+            android:name=".ui.gold.activity.GoldManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        //视频
+        <activity
+            android:name=".ui.video.activity.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+        //新闻
+        <activity
+            android:name=".ui.news.activity.NewsChannelActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.news.activity.NewsPhotoDetailActivity"
+            android:theme="@style/AppTheme.NoTrans" />
+
+        <activity
+            android:name=".ui.news.activity.NewsDetailActivity"
+            android:theme="@style/AppTheme.NoTrans" />
+
+    </application>
+
+</manifest>

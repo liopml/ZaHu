@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/item_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/news_summary_photo_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:transitionName="@string/transition_photos"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/news_summary_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/news_summary_photo_iv"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/news_summary_photo_iv"
+            android:lines="2"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            tools:text="习近平:吹响建设科技强国号角国号角国号角" />
+
+        <TextView
+            android:id="@+id/news_summary_digest_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_summary_title_tv"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/news_summary_photo_iv"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp"
+            tools:text="科技是国之利器，中国人民生活要好，必须有强大科技。" />
+
+        <TextView
+            android:id="@+id/news_summary_ptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/news_summary_digest_tv"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/tertiary_text"
+            android:textSize="12sp"
+            tools:text="05-28 20:09" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
