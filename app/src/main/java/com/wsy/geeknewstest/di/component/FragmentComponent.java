@@ -10,6 +10,7 @@ import com.wsy.geeknewstest.ui.gold.fragment.GoldMainFragment;
 import com.wsy.geeknewstest.ui.gold.fragment.GoldPagerFragment;
 import com.wsy.geeknewstest.ui.main.fragment.LikeFragment;
 import com.wsy.geeknewstest.ui.main.fragment.SettingFragment;
+import com.wsy.geeknewstest.ui.movie.fragment.MovieMainFragment;
 import com.wsy.geeknewstest.ui.news.fragment.NewsMainFragment;
 import com.wsy.geeknewstest.ui.news.fragment.NewsPagerFragment;
 import com.wsy.geeknewstest.ui.wechat.fragment.WechatMainFragment;
@@ -63,5 +64,7 @@ public interface FragmentComponent {
     void inject(NewsMainFragment newsMainFragment);
 
     void inject(NewsPagerFragment newsPagerFragment);
+
+    void inject(MovieMainFragment movieMainFragment);
 
 }

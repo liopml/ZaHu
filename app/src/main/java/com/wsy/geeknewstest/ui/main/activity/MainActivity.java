@@ -31,6 +31,7 @@ import com.wsy.geeknewstest.ui.gold.fragment.GoldMainFragment;
 import com.wsy.geeknewstest.ui.main.fragment.AboutFragment;
 import com.wsy.geeknewstest.ui.main.fragment.LikeFragment;
 import com.wsy.geeknewstest.ui.main.fragment.SettingFragment;
+import com.wsy.geeknewstest.ui.movie.fragment.MovieMainFragment;
 import com.wsy.geeknewstest.ui.news.fragment.NewsMainFragment;
 import com.wsy.geeknewstest.ui.video.activity.VideoActivity;
 import com.wsy.geeknewstest.ui.wechat.fragment.WechatMainFragment;
@@ -65,6 +66,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     GoldMainFragment mGoldFragment;
     NewsMainFragment mNewsFragment;
     VideoActivity mVideoActivity;
+    MovieMainFragment mMovieMainFragment;
     LikeFragment mLikeFragment;
     SettingFragment mSettingFragment;
     AboutFragment mAboutFragment;
@@ -113,6 +115,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         mGankFragment = new GankMainFragment();
         mGoldFragment = new GoldMainFragment();
         mNewsFragment = new NewsMainFragment();
+        mVideoActivity = new VideoActivity();
+        mMovieMainFragment = new MovieMainFragment();
         mLikeFragment = new LikeFragment();
         mSettingFragment = new SettingFragment();
         mAboutFragment = new AboutFragment();
@@ -126,7 +130,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         //第一次进入设置为drawer_zhihu
         mLastMenuItem = mNavigationView.getMenu().findItem(R.id.drawer_zhihu);
         //加载多个根Fragment
-        loadMultipleRootFragment(R.id.fl_main_content, 0, mZhihuFragment, mWechatFragment, mGankFragment, mLikeFragment, mSettingFragment, mAboutFragment, mGoldFragment, mNewsFragment);
+        loadMultipleRootFragment(R.id.fl_main_content, 0, mZhihuFragment, mWechatFragment, mGankFragment, mLikeFragment, mSettingFragment, mAboutFragment, mGoldFragment, mNewsFragment, mMovieMainFragment);
         //设置NavigationItem点击事件
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -178,6 +182,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                         mSearchMenuItem.setVisible(false);
                         break;
 
+                    case R.id.drawer_movie:
+                        showFragment = Constants.TYPE_MOVIE;
+                        mSearchMenuItem.setVisible(false);
+                        break;
                 }
 
                 if (mLastMenuItem != null) {
@@ -323,6 +331,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             case Constants.TYPE_NEWS:
                 return mNewsFragment;
 
+            case Constants.TYPE_MOVIE:
+                return mMovieMainFragment;
+
             case Constants.TYPE_LIKE:
                 return mLikeFragment;
 
@@ -352,6 +363,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
             case Constants.TYPE_NEWS:
                 return R.id.drawer_news;
+
+            case Constants.TYPE_MOVIE:
+                return R.id.drawer_movie;
 
             case Constants.TYPE_LIKE:
                 return R.id.drawer_like;

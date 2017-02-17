@@ -5,6 +5,7 @@ import com.wsy.geeknewstest.app.Constants;
 import com.wsy.geeknewstest.model.bean.gank.GankItemBean;
 import com.wsy.geeknewstest.model.bean.gank.GankSearchItemBean;
 import com.wsy.geeknewstest.model.bean.gold.GoldListBean;
+import com.wsy.geeknewstest.model.bean.movie.MovieBean;
 import com.wsy.geeknewstest.model.bean.news.NewsDetailBean;
 import com.wsy.geeknewstest.model.bean.news.NewsSummaryBean;
 import com.wsy.geeknewstest.model.bean.video.VideoDataBean;
@@ -22,6 +23,7 @@ import com.wsy.geeknewstest.model.bean.zhihu.WelcomeBean;
 import com.wsy.geeknewstest.model.bean.zhihu.ZhihuDetailBean;
 import com.wsy.geeknewstest.model.http.api.GankApis;
 import com.wsy.geeknewstest.model.http.api.GoldApis;
+import com.wsy.geeknewstest.model.http.api.MovieApis;
 import com.wsy.geeknewstest.model.http.api.NewsApis;
 import com.wsy.geeknewstest.model.http.api.NewsPhotoApis;
 import com.wsy.geeknewstest.model.http.api.VideoApis;
@@ -62,6 +64,7 @@ public class RetrofitHelper {
     private static VideoApis videoApiService = null;
     private static NewsApis newsApiService = null;
     private static NewsPhotoApis newsPhotoService = null;
+    private static MovieApis movieApiService = null;
 
     public RetrofitHelper() {
         init();
@@ -76,6 +79,7 @@ public class RetrofitHelper {
         videoApiService = getVideoApiService();
         newsApiService = getNewsApiService();
         newsPhotoService = getNewsPhotoService();
+        movieApiService = getMovieApiService();
     }
 
     private static void initOkHttp() {
@@ -212,6 +216,16 @@ public class RetrofitHelper {
         return newsPhotoRetrofit.create(NewsPhotoApis.class);
     }
 
+    private static MovieApis getMovieApiService() {
+        Retrofit movieRetrofit = new Retrofit.Builder()
+                .baseUrl(MovieApis.HOST)
+                .client(okHttpClient)
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+        return movieRetrofit.create(MovieApis.class);
+    }
+
     //获取最新日报的信息
     public Observable<DailyListBean> fetchDailyListInfo() {
         return zhihuApiService.getDailyList();
@@ -320,6 +334,10 @@ public class RetrofitHelper {
 
     public Observable<ResponseBody> fetchNewsBodyHtmlPhoto(String photoPath) {
         return newsPhotoService.getNewsBodyHtmlPhoto(photoPath);
+    }
+
+    public Observable<MovieBean> fetchMovieList() {
+        return movieApiService.getMovieData();
     }
 
 }

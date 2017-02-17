@@ -40,6 +40,8 @@ public class Constants {
 
     public static final int TYPE_NEWS = 113;
 
+    public static final int TYPE_MOVIE = 114;
+
     //================= KEY ====================
 
     public static final String KEY_API = "7954cabb94e7ba4a653da6dbfd8dc432"; //需要APIKEY请去 http://www.tianapi.com/#wxnew 申请,复用会减少访问可用次数

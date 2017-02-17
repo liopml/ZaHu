@@ -8,6 +8,7 @@ import com.wsy.geeknewstest.di.component.AppComponent;
 import com.wsy.geeknewstest.di.module.ActivityModule;
 import com.wsy.geeknewstest.ui.main.activity.MainActivity;
 import com.wsy.geeknewstest.ui.main.activity.WelcomeActivity;
+import com.wsy.geeknewstest.ui.movie.activity.MovieDetailActivity;
 import com.wsy.geeknewstest.ui.news.activity.NewsDetailActivity;
 import com.wsy.geeknewstest.ui.video.activity.VideoActivity;
 import com.wsy.geeknewstest.ui.zhihu.activity.SectionActivity;
@@ -44,5 +45,7 @@ public interface ActivityComponent {
     void inject(VideoActivity videoActivity);
 
     void inject(NewsDetailActivity newsDetailActivity);
+
+    void inject(MovieDetailActivity movieDetailActivity);
 
 }

@@ -9,6 +9,7 @@
     <string name="gold">稀土掘金</string>
     <string name="video">视频</string>
     <string name="news">新闻</string>
+    <string name="movie">电影</string>
     <string name="drawer_about">关于</string>
     <string name="drawer_collection">收藏</string>
     <string name="drawer_setting">设置</string>
@@ -21,6 +22,7 @@
     <string name="detail_bottom_like">点赞</string>
     <string name="detail_bottom_commit">评论</string>
     <string name="comment_expand">收起</string>
+    <string name="actionbar_more">更多信息</string>
 
     <string name="action_copy">复制链接到剪贴板</string>
     <string name="action_save">保存到本地</string>
@@ -52,5 +54,6 @@
 
     <!-- 共享过度动画 -->
     <string name="transition_photos">transition_animation_news_photos</string>
+    <string name="transition_movie_img">transition_movie_img</string>
 
 </resources>

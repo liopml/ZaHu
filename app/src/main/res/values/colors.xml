@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#ffce3d3a</color>
+    <color name="colorPrimaryDark">#ffce3d3a</color>
+    <color name="colorAccent">#ffce3d3a</color>
     <color name="colorBackground">#EEEEEE</color>
 
     <!--抽屉-->
@@ -70,5 +70,30 @@
     <color name="alpha_85_black">#D9000000</color>
     <color name="alpha_90_black">#E6000000</color>
     <color name="alpha_95_black">#F2000000</color>
+
+    <!--页面背景的颜色-->
+    <color name="colorPageBg">#f2f4f5</color>
+
+    <!--item的5.0一下版本选择器颜色-->
+    <color name="itemLowBackground">#d9d9d9</color>
+
+    <!--正文文字颜色-->
+    <color name="colorContent">#ff333333</color>
+
+    <!--没有水波纹效果的颜色选择器-->
+    <color name="colorItemBackground">#d9d9d9</color>
+
+    <color name="colorWhite">#ffffffff</color>
+
+    <color name="colorTitle">#666</color>
+
+    <!--透明色-->
+    <color name="colorTransparent">#00000000</color>
+
+    <!--电影评分-->
+    <color name="colorRateRed">#FB5B81</color>
+
+    <!--tab标签栏文字的颜色-->
+    <color name="colorTabText">#585858</color>
 
 </resources>

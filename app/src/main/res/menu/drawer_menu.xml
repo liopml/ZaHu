@@ -33,6 +33,11 @@
                 android:checkable="true"
                 android:icon="@mipmap/ic_drawer_news"
                 android:title="@string/news" />
+            <item
+                android:id="@+id/drawer_movie"
+                android:checkable="true"
+                android:icon="@mipmap/ic_movie"
+                android:title="@string/movie" />
         </menu>
     </item>
     <item android:title="@string/drawer_group_options">

@@ -18,7 +18,6 @@ public class NewsFragmentMainAdapter extends FragmentPagerAdapter {
     private final List<String> mTitles;
     private List<NewsPagerFragment> mNewsFragmentList = new ArrayList<>();
 
-
     public NewsFragmentMainAdapter(FragmentManager fm, List<String> mTitles, List<NewsPagerFragment> mNewsFragmentList) {
         super(fm);
         this.mTitles = mTitles;
